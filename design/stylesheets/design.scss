@@ -1,0 +1,46 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, Meiryo, sans-serif;
+}
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../images/top@0.75x-80.jpg");
+}
+
+.nav {
+
+  font-family: "Gothic MB101 Regular";
+  position: relative;
+  width: 100%;
+
+  h1 {
+    position: absolute;
+    left: 0;
+  }
+
+  ul {
+
+    position: absolute;
+    right: 0;
+
+    li {
+
+      float: left;
+      display: block;
+      width: 200px;
+      text-align: center;
+      list-style-type: none;
+
+      a {
+        color: #222;
+      }
+
+    }
+
+  }
+
+}
+
