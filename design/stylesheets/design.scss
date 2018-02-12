@@ -1,3 +1,11 @@
+$GothicMB101: "Gothic MB101 Regular", "Noto Sans Japanese";
+$accent: #C1272D;
+$orange:  #e84c00;
+$fuschia: #c10040;
+$scrollSize:    90px;
+$border:  4px;
+
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, Meiryo, sans-serif;
 }
@@ -8,33 +16,80 @@ body {
   background-size: cover;
   background-position: center;
   background-image: url("../images/top@0.75x-80.jpg");
+
+  .scroll {
+  position: absolute;
+  left: 50%; bottom: 0;
+  height: 0; width: 0;
+  
+  border-left: $scrollSize solid transparent;
+  border-right: $scrollSize solid transparent;
+  border-bottom: $scrollSize/1.125 solid $accent;
+  transform: translateX(-50%);
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: $scrollSize/2; left: 50%;
+    height: $scrollSize/4.5;
+    width: $scrollSize/3;
+    margin-top: -$scrollSize/9/2;
+    margin-left: -$scrollSize/3/2;
+    
+    background: #fff;
+    
+    clip-path: polygon(15% 0, 50% 60%, 85% 0, 100% 20%, 50% 100%, 0 20%);
+    
+    animation: bounce 2s ease infinite;
+  }
+}
+
+@keyframes bounce {
+  50% {
+    transform:
+      scale(.75)
+      translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 }
 
 nav {
-
-  font-family: "Gothic MB101 Regular";
+  font-family: $GothicMB101;
+  background-color: #fff;
 
   h1 {
-    text-align: center;
+    margin-left: 20px;
+    padding-top: 8px;
+    margin-bottom: 0;
+
+    img {
+      max-width: 460px;
+      height: auto;
+    }
   }
 
   ul {
     display: flex;
     align-items: center;
+    background-color: $accent;
+    height: 40px;
 
     li {
-
       text-align: center;
       list-style-type: none;
+      margin-top: 8px;
       width: 20%;
 
       a {
-        color: #222;
+        color: #fff;
         text-decoration: none;
 
         &:hover {
-          border-bottom: solid 1px #222;
-          color: #222;
+          border-bottom: solid 1px #fff;
+          color: #fff;
         }
       }
 
