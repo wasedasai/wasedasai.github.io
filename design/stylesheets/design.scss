@@ -1,10 +1,6 @@
-$GothicMB101: "Gothic MB101 Regular", "Noto Sans Japanese";
 $accent: #C1272D;
-$orange:  #e84c00;
-$fuschia: #c10040;
+$accent-transparent: rgba(193,39,45,0.6);
 $scrollSize:    90px;
-$border:  4px;
-
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, Meiryo, sans-serif;
@@ -27,37 +23,38 @@ body {
   border-bottom: $scrollSize/1.125 solid $accent;
   transform: translateX(-50%);
   
-  &:before {
-    content: '';
-    position: absolute;
-    top: $scrollSize/2; left: 50%;
-    height: $scrollSize/4.5;
-    width: $scrollSize/3;
-    margin-top: -$scrollSize/9/2;
-    margin-left: -$scrollSize/3/2;
-    
-    background: #fff;
-    
-    clip-path: polygon(15% 0, 50% 60%, 85% 0, 100% 20%, 50% 100%, 0 20%);
-    
-    animation: bounce 2s ease infinite;
+    &:before {
+      content: '';
+      position: absolute;
+      top: $scrollSize/2; left: 50%;
+      height: $scrollSize/4.5;
+      width: $scrollSize/3;
+      margin-top: -$scrollSize/9/2;
+      margin-left: -$scrollSize/3/2;
+      
+      background: #fff;
+      
+      clip-path: polygon(15% 0, 50% 60%, 85% 0, 100% 20%, 50% 100%, 0 20%);
+      
+      animation: bounce 2s ease infinite;
+    }
   }
-}
 
-@keyframes bounce {
-  50% {
-    transform:
-      scale(.75)
-      translateY(-50%);
+  @keyframes bounce {
+    50% {
+      transform:
+        scale(.75)
+        translateY(-50%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+    
   }
-  100% {
-    transform: translateY(0);
-  }
-}
 }
 
 nav {
-  font-family: $GothicMB101;
   background-color: #fff;
 
   h1 {
@@ -69,34 +66,82 @@ nav {
       max-width: 460px;
       height: auto;
     }
+
+    @media screen and (max-width: 640px) {
+      text-align: center;
+      margin-left: 0;
+
+      img {
+        max-width: 90%;
+      }    
+    }
   }
 
-  ul {
-    display: flex;
-    align-items: center;
-    background-color: $accent;
-    height: 40px;
+  @media screen and (min-width: 841px) {
+    ul {
+      display: flex;
+      align-items: center;
+      background-color: $accent;
+      height: 40px;
 
-    li {
-      text-align: center;
-      list-style-type: none;
-      margin-top: 8px;
-      width: 20%;
+      li {
+        text-align: center;
+        list-style-type: none;
+        margin-top: 8px;
+        width: 100%;
 
-      a {
-        color: #fff;
-        text-decoration: none;
-
-        &:hover {
-          border-bottom: solid 1px #fff;
+        a {
           color: #fff;
+          text-decoration: none;
+
+          &:hover {
+            border-bottom: solid 1px #fff;
+            color: #fff;
+          }
         }
       }
-
-
     }
-
   }
 
+  @media screen and (max-width: 840px) {
+    ul {
+      width: 100%;
+      background-color: $accent-transparent;
+      float: left;
+
+      li {
+        text-align: center;
+        list-style-type: none;
+        width: 49.7%;
+        float: left;
+        height: 36px;
+        background-color: $accent-transparent;
+        margin-bottom: 0;
+        border-bottom: solid 1px rgba(255,255,255,0.1);
+        padding-top: 10px;
+
+        &:nth-child(odd) {
+          border-right: solid 1px rgba(255,255,255,0.1);
+        }
+
+
+        a {
+          color: #fff;
+          text-decoration: none;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
 }
 
+.row {
+  margin-top: 20px;
+}
+
+h3 {
+  font-weight: bolder;
+}

@@ -36,7 +36,6 @@ body {
   100% {
     transform: translateY(0); } }
 nav {
-  font-family: "Gothic MB101 Regular", "Noto Sans Japanese";
   background-color: #fff; }
   nav h1 {
     margin-left: 20px;
@@ -45,21 +44,56 @@ nav {
     nav h1 img {
       max-width: 460px;
       height: auto; }
-  nav ul {
-    display: flex;
-    align-items: center;
-    background-color: #C1272D;
-    height: 40px; }
-    nav ul li {
-      text-align: center;
-      list-style-type: none;
-      margin-top: 8px;
-      width: 20%; }
-      nav ul li a {
-        color: #fff;
-        text-decoration: none; }
-        nav ul li a:hover {
-          border-bottom: solid 1px #fff;
-          color: #fff; }
+    @media screen and (max-width: 640px) {
+      nav h1 {
+        text-align: center;
+        margin-left: 0; }
+        nav h1 img {
+          max-width: 90%; } }
+  @media screen and (min-width: 841px) {
+    nav ul {
+      display: flex;
+      align-items: center;
+      background-color: #C1272D;
+      height: 40px; }
+      nav ul li {
+        text-align: center;
+        list-style-type: none;
+        margin-top: 8px;
+        width: 100%; }
+        nav ul li a {
+          color: #fff;
+          text-decoration: none; }
+          nav ul li a:hover {
+            border-bottom: solid 1px #fff;
+            color: #fff; } }
+  @media screen and (max-width: 840px) {
+    nav ul {
+      width: 100%;
+      background-color: rgba(193, 39, 45, 0.6);
+      float: left; }
+      nav ul li {
+        text-align: center;
+        list-style-type: none;
+        width: 49.7%;
+        float: left;
+        height: 36px;
+        background-color: rgba(193, 39, 45, 0.6);
+        margin-bottom: 0;
+        border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+        padding-top: 10px; }
+        nav ul li:nth-child(odd) {
+          border-right: solid 1px rgba(255, 255, 255, 0.1); }
+        nav ul li a {
+          color: #fff;
+          text-decoration: none; }
+          nav ul li a:hover {
+            color: #fff; } }
+
+.row {
+  margin-top: 20px; }
+
+h3 {
+  font-weight: bolder; }
 
 /*# sourceMappingURL=design.css.map */
