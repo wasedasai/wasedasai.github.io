@@ -18,6 +18,9 @@ body {
     border-right: 90px solid transparent;
     border-bottom: 80px solid #C1272D;
     transform: translateX(-50%); }
+    @media screen and (max-width: 840px) {
+      .header .scroll {
+        border-bottom: 80px solid rgba(193, 39, 45, 0.6); } }
     .header .scroll:before {
       content: '';
       position: absolute;

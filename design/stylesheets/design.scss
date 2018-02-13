@@ -21,6 +21,9 @@ body {
   border-left: $scrollSize solid transparent;
   border-right: $scrollSize solid transparent;
   border-bottom: $scrollSize/1.125 solid $accent;
+   @media screen and (max-width: 840px) {
+     border-bottom: $scrollSize/1.125 solid $accent-transparent;
+   }
   transform: translateX(-50%);
   
     &:before {
@@ -123,7 +126,6 @@ nav {
         &:nth-child(odd) {
           border-right: solid 1px rgba(255,255,255,0.1);
         }
-
 
         a {
           color: #fff;
