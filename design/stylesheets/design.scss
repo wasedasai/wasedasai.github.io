@@ -46,6 +46,7 @@ body {
       background: #fff;
       
       clip-path: polygon(15% 0, 50% 60%, 85% 0, 100% 20%, 50% 100%, 0 20%);
+      -webkit-clip-path: polygon(15% 0, 50% 60%, 85% 0, 100% 20%, 50% 100%, 0 20%);
       
       animation: bounce 2s ease infinite;
     }
