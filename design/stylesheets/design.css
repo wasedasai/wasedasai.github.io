@@ -5,6 +5,12 @@ html, body {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, Meiryo, sans-serif; }
 
+.row {
+  margin-top: 20px; }
+
+h3 {
+  font-weight: bolder; }
+
 .header {
   width: 100vw;
   height: 100vh;
@@ -101,10 +107,30 @@ nav {
           nav ul li a:hover {
             color: #fff; } }
 
-.row {
-  margin-top: 20px; }
+footer {
+  margin-top: 20px;
+  background-color: #CCCCCC;
+  height: 100px;
+  text-align: center; }
 
-h3 {
-  font-weight: bolder; }
+.moreLink {
+  display: block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  border: solid 2px #C1272D;
+  transition: .4s;
+  width: 80px;
+  margin-left: auto;
+  text-align: center;
+  color: #C1272D; }
+  .moreLink svg, .moreLink i {
+    color: #C1272D;
+    vertical-align: -2px; }
+
+.moreLink:hover {
+  background: #C1272D;
+  color: #fff; }
+  .moreLink:hover svg, .moreLink:hover i {
+    color: #fff; }
 
 /*# sourceMappingURL=design.css.map */
