@@ -173,11 +173,16 @@ footer {
   padding-bottom: 10px;
 
   .copyright {
+    margin-top: 10px;
     text-align: center;
   }
 
   p {
     margin: 10px;
+
+    &:first-child {
+      margin-top: 0px;
+    }
   }
 
   a {

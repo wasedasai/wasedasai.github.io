@@ -113,9 +113,12 @@ footer {
   background-color: #CCCCCC;
   padding-bottom: 10px; }
   footer .copyright {
+    margin-top: 10px;
     text-align: center; }
   footer p {
     margin: 10px; }
+    footer p:first-child {
+      margin-top: 0px; }
   footer a {
     color: #222;
     text-decoration: none; }
