@@ -2,6 +2,7 @@
 $accent: #C1272D;
 $accent-transparent: rgba(193, 39, 45, 0.6);
 $scrollSize: 90px;
+$black: #222;
 $gray: #CCCCCC;
 
 // Overall
@@ -167,9 +168,33 @@ nav {
 // Footer
 footer {
   margin-top: 20px;
+  padding-top: 20px;
   background-color: $gray;
-  height: 100px;
-  text-align: center;
+  padding-bottom: 10px;
+
+  .copyright {
+    text-align: center;
+  }
+
+  p {
+    margin: 10px;
+  }
+
+  a {
+    color: $black;
+    text-decoration: none;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    padding-bottom: 20px;
+    .container {
+      display: none;
+    }
+  }
 }
 
 // Parts
@@ -189,13 +214,13 @@ footer {
     color: $accent;
     vertical-align: -2px;
   }
-}
 
-.moreLink:hover {
-  background: $accent;
-  color: #fff;
-
-  svg, i {
+  &:hover {
+    background: $accent;
     color: #fff;
+
+    svg, i {
+      color: #fff;
+    }
   }
 }

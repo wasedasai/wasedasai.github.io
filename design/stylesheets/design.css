@@ -109,9 +109,23 @@ nav {
 
 footer {
   margin-top: 20px;
+  padding-top: 20px;
   background-color: #CCCCCC;
-  height: 100px;
-  text-align: center; }
+  padding-bottom: 10px; }
+  footer .copyright {
+    text-align: center; }
+  footer p {
+    margin: 10px; }
+  footer a {
+    color: #222;
+    text-decoration: none; }
+    footer a:hover {
+      color: #C1272D; }
+  @media screen and (max-width: 640px) {
+    footer {
+      padding-bottom: 20px; }
+      footer .container {
+        display: none; } }
 
 .moreLink {
   display: block;
@@ -126,11 +140,10 @@ footer {
   .moreLink svg, .moreLink i {
     color: #C1272D;
     vertical-align: -2px; }
-
-.moreLink:hover {
-  background: #C1272D;
-  color: #fff; }
-  .moreLink:hover svg, .moreLink:hover i {
+  .moreLink:hover {
+    background: #C1272D;
     color: #fff; }
+    .moreLink:hover svg, .moreLink:hover i {
+      color: #fff; }
 
 /*# sourceMappingURL=design.css.map */
